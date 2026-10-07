@@ -1,0 +1,25 @@
+services:
+  safety-monitor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: yolo-safety-monitor:latest
+    container_name: yolo-safety-monitoring
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - PYTHONUNBUFFERED=1
+    # Allocate shared memory for high-frame-rate video and OpenCV buffering
+    shm_size: '2gb'
+    volumes:
+      # Optional: Persist threshold settings and test results on host
+      - ./config:/app/config
+      - ./results:/app/results
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/api/status"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s

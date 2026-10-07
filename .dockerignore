@@ -1,0 +1,26 @@
+# Git & IDE
+.git
+.gitignore
+.DS_Store
+.vscode
+.cache
+.agents
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local macOS compiled binaries (must build natively inside Linux container)
+build/
+*.dylib
+
+# Temporary local runtime artifacts (will be generated inside container)
+uploads/*
+!uploads/.gitkeep
+results/*
+!results/.gitkeep
+sample_test.mp4
+test_result.jpg
+opencv_result.jpg

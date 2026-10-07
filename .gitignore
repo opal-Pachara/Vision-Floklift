@@ -1,0 +1,77 @@
+# ==============================================================================
+# Git Ignore for YOLOv12n Industrial AI Safety Monitoring Project
+# ==============================================================================
+
+# OS & Editor
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build artifacts & compiled binaries
+build/
+bin/
+lib/
+*.o
+*.obj
+*.so
+*.so.*
+*.dylib
+*.dll
+*.a
+*.lib
+compile_commands.json
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Clangd & Tooling cache
+.cache/
+.clangd/
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+
+# Dynamic runtime files (User uploads & processed output videos)
+uploads/*
+!uploads/.gitkeep
+results/*
+!results/.gitkeep
+
+# Large temporary video / image files
+*.mp4
+*.avi
+*.mov
+*.mkv
+!sample_test.mp4
+test_result.jpg
+opencv_result.jpg
+
+# Antigravity & Agent workspace artifacts
+.agents/
