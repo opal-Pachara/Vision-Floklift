@@ -1,4 +1,0 @@
-forklift
-helmet
-person
-safety_vest
